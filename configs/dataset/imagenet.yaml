@@ -1,0 +1,9 @@
+name: imagenet
+
+_target_: lavps.dataset.imagenet.ImageNet
+
+path: "/path/to/imagenet"
+split: train
+offset: 0
+image_size: 256
+one_image_per_class: false

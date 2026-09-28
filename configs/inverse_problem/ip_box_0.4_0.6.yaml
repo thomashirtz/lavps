@@ -1,0 +1,9 @@
+defaults:
+  - _defaults
+  - _self_
+
+abbreviation: 'ip_box_${.min_frac}_${.max_frac}'
+degradation: 'invfussion_box-3-${.image_size}-${.min_frac}-${.max_frac}'
+
+min_frac: 0.4
+max_frac: 0.6

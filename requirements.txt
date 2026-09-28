@@ -1,0 +1,24 @@
+# Pytorch and Natten
+--extra-index-url https://download.pytorch.org/whl/cu124
+https://github.com/SHI-Labs/NATTEN/releases/download/v0.17.5/natten-0.17.5%2Btorch260cu124-cp312-cp312-linux_x86_64.whl
+torch==2.6.0+cu124
+
+torchvision
+ninja
+numpy
+tqdm
+natsort
+transformers
+accelerate
+Pillow
+tqdm
+numpy
+absl-py
+diffusers
+pytest
+hydra-core
+pandas
+einops
+scipy
+lpips
+pytorch-fid

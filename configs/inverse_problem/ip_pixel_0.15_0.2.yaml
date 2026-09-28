@@ -1,0 +1,9 @@
+defaults:
+  - _defaults
+  - _self_
+
+abbreviation: 'ip_pixel_${.min_p}_${.max_p}'
+degradation: 'invfussion_smallpatch-3-${.image_size}-${.min_p}-${.max_p}'
+
+min_p: 0.15
+max_p: 0.2

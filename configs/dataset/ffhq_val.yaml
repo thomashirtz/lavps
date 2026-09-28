@@ -1,0 +1,8 @@
+defaults:
+  - ffhq
+  - _self_
+
+summary: ffhq_val
+
+num_images: 32
+offset: 61000

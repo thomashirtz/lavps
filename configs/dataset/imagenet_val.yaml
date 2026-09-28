@@ -1,0 +1,9 @@
+defaults:
+  - imagenet
+  - _self_
+
+name: imagenet_val
+
+split: val
+num_images: 32
+one_image_per_class: true

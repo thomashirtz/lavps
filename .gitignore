@@ -1,0 +1,51 @@
+.DS_Store
+
+# python build
+build
+**/**.egg-info
+
+# python cache
+__pycache__
+__cache__
+.pytest_cache
+
+wandb
+venv
+.venv/
+
+# env / secrets
+.env
+*.env
+
+# hydra outputs
+**/outputs/**
+outputs/*
+multirun/*
+
+# logs
+**/*.log
+
+# IDE / editor
+/.idea/*
+*.code-workspace
+.vscode/
+
+# artifacts
+/reconstructions/*
+/tmp/*
+/assets/*
+*.pt
+*.pth
+*.ckpt
+/models/*
+/scripts/models/*
+/scripts/plots/*
+results/*
+output/
+/scripts/outputs/*
+/scripts/multirun/*
+/inference_models
+/trash
+configs/latent-diffusion/ffhq-ldm-vq-4.yaml
+TODO.md
+release-assets/

@@ -1,0 +1,29 @@
+# ⚠️ Need to resolve the config in the beginning of the script.
+# ⚠️ The device name will be evaluated inside the script and will be added at the end.
+
+defaults:
+  - sampler: mgdm
+  - model: hdit_ffhq
+  - dataset: ffhq_val
+  - inverse_problem: ip_pixel_0.08_0.1
+  - _self_
+
+experiment:
+  name: "${inverse_problem.summary}-${sampler.summary}-model=${model.name}"
+  folder: 'test' # null # put "null" without quote if you don't want to put it in a specific folder.
+
+# sampler:
+#    nsteps: 10
+
+dtype: "bfloat16"
+device: "cuda:0"
+failsafe_cuda: true
+
+# dataset:
+#   num_images: 500
+#   offset: 6
+#   image_name_list: null
+  # image_name_list: # If you want to choose the images, create a list of the file name
+  #  - "60000.png"
+  #  - "60001.png"
+  # ...

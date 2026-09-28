@@ -1,0 +1,32 @@
+name: mgdm
+nsteps: 100
+nsamples: 1
+low_idx: 1
+high_idx: 30
+summary: "sampler=${.name}-type=${.parameters.initialize_va_cfg.type}-gs0=${.parameters.gradient_steps_fn.conditions.0.return}-gs1=${.parameters.gradient_steps_fn.conditions.1.return}-nds=${.parameters.n_denoising_steps}-nsteps=${.nsteps}-nreps=${.parameters.n_reps}-lr=${.parameters.lr_fn.conditions.0.return}-low_idx=${.low_idx}-high_idx=${.high_idx}"
+
+parameters:
+  n_reps: 1
+  n_denoising_steps: 1
+  eta: 1.
+  tau_sampling: deterministic
+  gradient_steps_fn:
+    conditions:
+      - condition: "n_steps - ${.....low_idx} >= i >= n_steps - ${.....high_idx}"
+        return: 3
+      - condition: "default"
+        return: 3
+  lr_fn:
+    conditions:
+      - condition: "default"
+        return: 0.01
+  initialize_va_fn:
+    conditions:
+      - condition: "default"
+        return: False
+  initialize_va_cfg:
+    type: "zero_shot"
+    model: ""
+    path: ""
+    compare_loss: False
+    initialization_best_of: False

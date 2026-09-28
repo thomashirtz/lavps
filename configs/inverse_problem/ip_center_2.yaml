@@ -1,0 +1,8 @@
+defaults:
+  - _defaults
+  - _self_
+
+abbreviation: 'ip_center_${.fraction}'
+degradation: 'invfussion_center_box-3-${.image_size}-${.fraction}'
+
+fraction: 2

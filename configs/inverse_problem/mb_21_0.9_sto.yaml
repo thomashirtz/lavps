@@ -1,0 +1,9 @@
+defaults:
+  - _defaults
+  - _self_
+
+abbreviation: 'sto_mb_${.size}_${.intensity}'
+degradation: 'stochastic_motion_blur-${.size}-${.intensity}-${.image_size}'
+
+size: 21
+intensity: 0.9

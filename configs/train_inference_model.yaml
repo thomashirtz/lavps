@@ -1,0 +1,39 @@
+defaults:
+  - dataset: imagenet_train
+  - model: hdit_imagenet
+  - inverse_problem: sr_4
+  - _self_
+
+sampler:
+  nsteps: 100
+
+resolution: 256
+
+device: "cuda:0"
+inference_model_type: "hdit_palette_imagenet"
+
+training:
+  batch_size: 16
+  num_workers: 4
+  lr: 0.00005
+  wd: 0.00000
+  num_epochs: 20
+  lr_scheduler: constant
+  print_ratio: true
+  train_split: 0.01 # {0, 1, ..., int(total_dataset_size * train_split) - 1}
+  val_split: 0.001 # int(total_dataset_size * train_split) + {0, 1, ..., int(total_dataset_size * val_split) - 1}
+  shuffle: true
+
+task:
+  deterministic: true
+  low_idx: 1
+  high_idx: 30
+
+checkpoint:
+  enabled: true
+  num_newest_to_keep: 2
+  keep_list: null
+
+output_path: null
+folder_name: "inference_model_training"
+save_folder: "${folder_name}/${dataset.name}/${inverse_problem.abbreviation}-${inverse_problem.noise_level}-deterministic${task.deterministic}/${model.name}-${inference_model_type}/train_split${training.train_split}-num_epochs${training.num_epochs}/lr${training.lr}-wd${training.wd}-lr_scheduler${training.lr_scheduler}-bs${training.batch_size}-low_idx${task.low_idx}-high_idx${task.high_idx}"

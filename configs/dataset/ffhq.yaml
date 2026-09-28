@@ -1,0 +1,6 @@
+name: ffhq
+_target_: lavps.dataset.ffhq.FFHQ
+
+path: "/path/to/ffhq"
+num_images: 70000
+image_size: 256

@@ -1,0 +1,8 @@
+from pathlib import Path
+
+CURRENT_FILE_PATH = Path(__file__).resolve()
+REPOSITORY_PATH = CURRENT_FILE_PATH.parent.parent.parent
+OUTPUT_DIRECTORY = REPOSITORY_PATH / "output"
+CONFIG_DIRECTORY = REPOSITORY_PATH / "configs"
+MODELS_DIRECTORY = REPOSITORY_PATH / "models"
+IP_CONFIG_DIRECTORY = CONFIG_DIRECTORY / "inverse_problem"

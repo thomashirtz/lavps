@@ -1,0 +1,8 @@
+defaults:
+  - ffhq
+  - _self_
+
+summary: ffhq_train
+
+num_images: 60000
+offset: 0

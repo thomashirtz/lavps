@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+
+[project]
+name = "lavps"
+version = "0.1.0"
+license = { text = "MIT" }
+
+dependencies = [
+    "torch",
+    "torchvision",
+    "natten==0.17.5",
+]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+packages = {find = {where = ["src"]}}
+
+[tool.pytest.ini_options]
+pythonpath = ["."]

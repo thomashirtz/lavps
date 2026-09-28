@@ -1,0 +1,8 @@
+defaults:
+  - ffhq
+  - _self_
+
+summary: ffhq_test
+
+num_images: 300
+offset: 69000

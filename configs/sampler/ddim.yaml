@@ -1,0 +1,7 @@
+name: ddim
+nsteps: 500
+
+summary: "sampler=${.name}-nsteps=${.nsteps}-eta=${.parameters.eta}"
+
+parameters:
+  eta: 1

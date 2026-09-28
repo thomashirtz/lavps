@@ -1,0 +1,9 @@
+defaults:
+  - imagenet
+  - _self_
+
+name: imagenet_test
+
+split: test
+num_images: 300
+one_image_per_class: true

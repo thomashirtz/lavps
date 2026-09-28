@@ -1,0 +1,17 @@
+name: 'hdit_ffhq'
+
+_target_: lavps.networks.load_hdit_epsilon_network
+path: '/path/to/hdit-ffhq256-unconditional.pt'
+fp16: false
+network_kwargs:
+  class_name: invfussion.models.hdit.HDiT
+  joint: false
+  in_mult: 1
+  data: FFHQ256
+interface_kwargs:
+  img_resolution: ${..image_resolution}
+  img_channels: 3
+  label_dim: 0
+  sigma_data: 0.5
+
+image_resolution: 256

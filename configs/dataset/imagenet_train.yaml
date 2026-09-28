@@ -1,0 +1,7 @@
+defaults:
+  - imagenet
+  - _self_
+
+name: imagenet_train
+
+split: train

@@ -1,0 +1,8 @@
+defaults:
+  - _defaults
+  - _self_
+
+abbreviation: 'sr_${.factor}'
+degradation: 'super_resolution-3-${.image_size}-${.factor}'
+
+factor: 4

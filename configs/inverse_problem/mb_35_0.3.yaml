@@ -1,0 +1,9 @@
+defaults:
+  - _defaults
+  - _self_
+
+abbreviation: 'mb_${.size}_${.intensity}'
+degradation: 'motion_blur-${.size}-${.intensity}-${.image_size}'
+
+size: 35
+intensity: 0.3
